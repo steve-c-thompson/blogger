@@ -22,6 +22,8 @@ describe 'user edits article' do
       expect(page).to have_content("New body")
       expect(current_path).to eq(article_path(article))
 
+      expect(page).to have_content("Article New title was updated.")
+
       # I have to reload the object
       article = Article.find(article.id)
       expect(article.title).to eq("New title")
