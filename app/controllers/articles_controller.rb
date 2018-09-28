@@ -10,6 +10,8 @@ class ArticlesController < ApplicationController
     #binding.pry
     #byebug
     #@article = Article.find(params[:id])
+    @comment = Comment.new
+    @comment.article_id = @article.id
   end
 
   def new
