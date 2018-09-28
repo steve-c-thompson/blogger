@@ -46,6 +46,8 @@ describe "user sees one article" do
       expect(page).to have_content("Post a Comment")
       expect(page).to have_content("ME!")
       expect(page).to have_content("So many thoughts on this article.")
+
+      expect(page).to have_content("Comments (#{article.comments.size})")
     end
   end
 
