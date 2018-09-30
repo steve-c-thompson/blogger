@@ -2,7 +2,7 @@
 <p>
   Tags:
   <% @article.tags.each do |tag| %>
-    <%= tag.name %>
+    <%= link_to tag.name, tag_path(tag) %>
   <% end %>
 </p>
 <p><%= @article.body %></p>
