@@ -59,7 +59,7 @@ class ArticlesController < ApplicationController
 
   # method is both reusable for creating articles and makes Strong Parameters
     def article_params
-      params.require(:article).permit(:title, :body)
+      params.require(:article).permit(:title, :body, :tag_list)
     end
 
     def set_article
