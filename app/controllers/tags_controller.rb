@@ -1,6 +1,7 @@
 # app/controllers/tags_controller.rb
 class TagsController < ApplicationController
   before_action :set_tag, only: [:destroy, :show]
+  before_action :require_login, only: [:destroy]
 
   def index
     @tags = Tag.all
